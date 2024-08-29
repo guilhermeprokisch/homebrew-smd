@@ -1,20 +1,20 @@
 class Smd < Formula
   desc "A minimalistic  Markdown renderer for the terminal with syntax highlighting, emoji support, and image rendering"
   homepage "https://github.com/guilhermeprokisch/smd"
-  version "0.2.0"
+  version "0.2.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/guilhermeprokisch/smd/releases/download/v0.2.0/smd-aarch64-apple-darwin.tar.xz"
-      sha256 "e1d0836c3e9fe73eea8742f36f630e372f27c3aa42c3082e1c718477379a5c79"
+      url "https://github.com/guilhermeprokisch/smd/releases/download/v0.2.1/smd-aarch64-apple-darwin.tar.xz"
+      sha256 "43848795df7c74684365e003f535ec9c1c7c0cc798c1cdd031b20245443cd7ce"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/guilhermeprokisch/smd/releases/download/v0.2.0/smd-x86_64-apple-darwin.tar.xz"
-      sha256 "3322328204a01f70bc1814ee0d395f46307ecc94e0c929ffff9fa38ef38e9de3"
+      url "https://github.com/guilhermeprokisch/smd/releases/download/v0.2.1/smd-x86_64-apple-darwin.tar.xz"
+      sha256 "62f225514947ee149771ac2308b940ca84a9ef7f3495e5c40d90b312a5645cf8"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/guilhermeprokisch/smd/releases/download/v0.2.0/smd-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "acef7533d69f3c381979ecf078d1baeb34fa445b0fc6faf58193b862a8ccbe58"
+    url "https://github.com/guilhermeprokisch/smd/releases/download/v0.2.1/smd-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "5c5ee524771605262cf95799f79ff9a2f38e14417705dd8cc065bbc5e1b33be8"
   end
   license "MIT"
 
