@@ -1,30 +1,28 @@
 class Smd < Formula
   desc "A minimalistic  Markdown renderer for the terminal with syntax highlighting, emoji support, and image rendering"
   homepage "https://github.com/guilhermeprokisch/smd"
-  version "0.2.10"
+  version "0.3.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/guilhermeprokisch/smd/releases/download/v0.2.10/smd-aarch64-apple-darwin.tar.xz"
-      sha256 "e02a298490b205b100fa2b96881c70737a78742c7e48a4c7f015dbbaa8955962"
+      url "https://github.com/guilhermeprokisch/smd/releases/download/v0.3.1/smd-aarch64-apple-darwin.tar.xz"
+      sha256 "51f46c708653cfc2ad4ef4f5fadcbe6f5b1544b0234a3c622e6ca047083e795e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/guilhermeprokisch/smd/releases/download/v0.2.10/smd-x86_64-apple-darwin.tar.xz"
-      sha256 "6bc43ec9b6689e4c4d62623a23a9736e48cd524c4faa9e8dc6254fd1ab67dc2f"
+      url "https://github.com/guilhermeprokisch/smd/releases/download/v0.3.1/smd-x86_64-apple-darwin.tar.xz"
+      sha256 "a064ce12cc68edca64d3641f0dbf66aa6c6523ead36336cc44f6137ee11440ca"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/guilhermeprokisch/smd/releases/download/v0.2.10/smd-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "784b7807c1c8a51f2c040c7ddba742b04ad4756ec01249061e2f1d4d48e88856"
+    url "https://github.com/guilhermeprokisch/smd/releases/download/v0.3.1/smd-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "ae7bbae04d1ab13250b8870c9b81a4f40d1573bb3ccc419d08eb5e8a3fefd60c"
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":              {},
-    "x86_64-apple-darwin":               {},
-    "x86_64-pc-windows-gnu":             {},
-    "x86_64-unknown-linux-gnu":          {},
-    "x86_64-unknown-linux-musl-dynamic": {},
-    "x86_64-unknown-linux-musl-static":  {},
+    "aarch64-apple-darwin":     {},
+    "x86_64-apple-darwin":      {},
+    "x86_64-pc-windows-gnu":    {},
+    "x86_64-unknown-linux-gnu": {},
   }.freeze
 
   def target_triple
